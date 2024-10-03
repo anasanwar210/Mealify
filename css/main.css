@@ -89,6 +89,7 @@ header .container nav .navbar-container label.open-menu {
   transform: translateY(-50%);
   padding: 1% 2%;
   cursor: pointer;
+  z-index: 999;
 }
 
 header .container nav .navbar-container .nav-links li.x-mark label.close-menu {
@@ -182,6 +183,7 @@ header .container nav .navbar-container .dark-mode {
   align-items: center;
   position: relative;
   right: 15%;
+  padding: 0 5%;
 }
 
 header .container nav .navbar-container .dark-mode label {
@@ -211,11 +213,7 @@ header .content {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -10;
+  margin: auto;
 }
 
 header .content .disc {
@@ -226,7 +224,7 @@ header .content .disc {
 header .content .disc h2 {
   font-size: 65px;
   font-weight: 700;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 header .content .disc p {
@@ -235,15 +233,13 @@ header .content .disc p {
 }
 
 header .content .img-contain {
-  width: 80%;
+  padding-top: 30%;
+  width: 100%;
   margin: auto;
-  transform: translateY(25%);
-  margin-bottom: 8%;
-  /* background-color: red; */
+  /* background-color: #ce1212; */
 }
 
-header .content .img-contain img {
-  
+header .content .img-contain img:hover {
   animation: dance 1s infinite;
 }
 
@@ -288,6 +284,7 @@ header .content .img-contain img {
 
 header .content .btn-link {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
@@ -325,6 +322,7 @@ header .content .btn-link .watch-video .linear-gradient {
     transparent 50% 100%
   );
   border-radius: 50%;
+  z-index: -2;
 }
 
 header .content .btn-link .watch-video .linear-gradient i {
@@ -339,6 +337,7 @@ header .content .btn-link .watch-video .linear-gradient i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 header .content .btn-link .watch-video a .word {
