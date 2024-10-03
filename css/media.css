@@ -7,20 +7,16 @@
 /* Start Navigation Bar */
 
 @media (min-width: 992px) {
-  header .container {
-    width: 100%;
-    background-color: #fff ;
-    padding: 1%;
-  }
-  header .container nav {
-    width: 80%;
-    margin: auto;
+  header .container nav .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 1%;
   }
 
-  header .container nav .nav-links {
+  header .container nav .navbar-container .nav-links {
     position: static;
     right: 0%;
     left: 0;
@@ -30,20 +26,20 @@
     box-shadow: none;
   }
 
-  header .container nav .overlay {
+  header .container nav .navbar-container .overlay {
     display: none;
   }
 
-  header .container nav .nav-links li {
+  header .container nav .navbar-container .nav-links li {
     padding: 10px 15px;
   }
 
-  header .container nav label.open-menu,
+  header .container nav .navbar-container label.open-menu,
   header .container nav .nav-links li.x-mark label.close-menu {
     display: none;
   }
 
-  header .container nav .dark-mode {
+  header .container nav .navbar-container .dark-mode {
     position: static;
   }
 }
