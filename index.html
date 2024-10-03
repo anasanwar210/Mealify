@@ -18,19 +18,63 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- CSS Style -->
     <link
       rel="shortcut icon"
       href="images/footer/favicon.png"
       type="image/x-icon"
     />
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- CSS Style -->
     <link rel="stylesheet" href="css/media.css" />
-
+    <link rel="stylesheet" href="css/main.css" />
     <title>Mealify</title>
   </head>
-  <body></body>
+  <body>
+    <header id="home" class="home">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="index.html">mealify</a>
+          </div>
+
+          <input type="checkbox" name="menu" id="menu" />
+          <label for="menu" class="open-menu">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <label for="menu" class="overlay"></label>
+          <ul class="nav-links">
+            <li class="x-mark">
+              <label for="menu" class="close-menu">
+                <i class="fa-solid fa-xmark"></i>
+              </label>
+            </li>
+            <li class="active"><a href="#home">home</a></li>
+            <li><a href="#chefs">chefs</a></li>
+            <li><a href="#gallery">gallery</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+          <div class="dark-mode">
+            <input type="checkbox" name="mood" id="mood" />
+            <label for="mood" class="moon">
+              <i class="fa-solid fa-moon"></i>
+            </label>
+            <label for="mood" class="sun">
+              <i class="fa-regular fa-sun"></i>
+            </label>
+          </div>
+        </nav>
+      </div>
+    </header>
+<!-- <section id="chefs" class="chefs">
+
+</section>
+<section id="gallery" class="gallery">
+
+</section>
+<section id="contact" class="contact">
+
+</section> -->
+  </body>
 </html>

@@ -1,0 +1,57 @@
+/* 
+=======================================================
+                  Start Header - NavBar
+=======================================================
+*/
+
+/* Start Navigation Bar */
+
+@media (min-width: 992px) {
+  header .container {
+    width: 100%;
+    background-color: #fff ;
+    padding: 1%;
+  }
+  header .container nav {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .container nav .nav-links {
+    position: static;
+    right: 0%;
+    left: 0;
+    display: flex;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+  }
+
+  header .container nav .overlay {
+    display: none;
+  }
+
+  header .container nav .nav-links li {
+    padding: 10px 15px;
+  }
+
+  header .container nav label.open-menu,
+  header .container nav .nav-links li.x-mark label.close-menu {
+    display: none;
+  }
+
+  header .container nav .dark-mode {
+    position: static;
+  }
+}
+
+/* End Navigation Bar */
+
+/* 
+=======================================================
+                  End Header - NavBar
+=======================================================
+*/
