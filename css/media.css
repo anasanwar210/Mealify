@@ -92,6 +92,10 @@
     position: static;
   }
 
+  header .content .btn-link {
+    width: 90%;
+  }
+
   header .content {
     height: 100vh;
     width: 80%;
@@ -114,7 +118,6 @@
     justify-content: flex-start;
     gap: 20px;
   }
-
 }
 
 /* End Navigation Bar */
@@ -122,5 +125,90 @@
 /* 
 =======================================================
                   End Header - NavBar
+=======================================================
+*/
+
+/* 
+=======================================================
+                      Start Chefs
+=======================================================
+*/
+
+@media (min-width: 767px) and (max-width: 992px) {
+  .chefs .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .chefs .container .chefs-pic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .chefs .container .chefs-pic .chef {
+    width: 48%;
+    margin-left: auto;
+  
+  }
+
+  .chefs .container .chefs-pic .chef .pic::after {
+    bottom: -8%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+  .chefs .container {
+    width: 80%;
+    margin: auto;
+  }
+  .chefs .container .chefs-pic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .chefs .container .chefs-pic .chef {
+    width: calc(90% / 3);
+    margin-left: auto;
+    margin:  0 10px ;
+  
+  }
+
+  .chefs .container .chefs-pic .chef .pic::after {
+    bottom: -20%;
+  }
+}
+
+@media (min-width: 1200px){
+  .chefs .container {
+    width: 80%;
+    margin: auto;
+  }
+  .chefs .container .chefs-pic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .chefs .container .chefs-pic .chef {
+    width: calc((100% - 60px)/ 3);
+    margin-left: auto;
+    margin:  0 10px ;
+  
+  }
+
+  .chefs .container .chefs-pic .chef .pic::after {
+    bottom: -13%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .chefs .container .chefs-pic .chef .pic::after {
+    bottom: -8%;
+  }
+}
+
+/* 
+=======================================================
+                      End Chefs
 =======================================================
 */

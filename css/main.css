@@ -59,7 +59,7 @@ input:checked + * {
   --header-content: #252525;
   --par-content: #9f9f9f;
   --nav-background-color: #000;
-  --hover-light: #D78C23;
+  --hover-light: #d78c23;
 
   --black-color: #fff;
   --white-color: #000;
@@ -79,21 +79,19 @@ input:checked + * {
 
 .dark-mode label {
   cursor: pointer;
+  position: absolute;
 }
 
 .dark-mode label.sun {
   display: none;
 }
 
-input:checked  label.sun {
-  display: block;
-}
-input:checked  label.moon {
+:root:has(.mode:checked) .dark-mode label.moon {
   display: none;
 }
 
- label {
-  position: absolute;
+:root:has(.mode:checked) .dark-mode label.sun {
+  display: block;
 }
 
 /* 
@@ -276,7 +274,7 @@ header .container nav .navbar-container .dark-mode label {
 /* Start Content */
 
 header .content {
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   width: 90%;
@@ -356,11 +354,12 @@ header .content .btn-link {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin: 4% 0;
 }
 
 header .content .btn-link .table {
   padding: 3% 6%;
-  /* margin-bottom: 4%; */
+  margin-bottom: 3%;
   border-radius: 20px;
   border-top-left-radius: 0;
   background-color: var(--main-color);
@@ -424,5 +423,128 @@ header .content .btn-link .watch-video a {
 /* 
 =======================================================
                   End NavBar - Content
+=======================================================
+*/
+
+/* 
+=======================================================
+                    Start Chefs
+=======================================================
+*/
+
+.chefs .container {
+  padding: 10% 0;
+  text-align: center;
+}
+
+.chefs .container .title {
+  text-align: center;
+}
+
+.chefs .container .title h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--title-content);
+  text-transform: uppercase;
+}
+
+.chefs .container .title p {
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--par-content);
+  margin-top: 0;
+}
+
+.chefs .container .title p > span {
+  color: var(--main-color);
+}
+
+.chefs .container .chefs-pic {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.chefs .container .chefs-pic .chef {
+  width: 95%;
+  margin: auto;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s linear, box-shadow 0.2s linear;
+  overflow: hidden;
+}
+
+.chefs .container .chefs-pic .chef:hover {
+  transform: scale(1.04);
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.chefs .container .chefs-pic .chef .pic {
+  position: relative;
+}
+
+.chefs .container .chefs-pic .chef .pic::after {
+  content: "";
+  background-image: url(../images/chefs/team-shape.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.chefs .container .chefs-pic .chef .pic img {
+  width: 100%;
+}
+
+.chefs .container .chefs-pic .chef .pic .social-icon {
+  position: absolute;
+  top: 8%;
+  right: -20%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0d6d0;
+  padding: 2%;
+  border-radius: 8px;
+  transition: right 0.5s 0.2s linear;
+}
+
+.chefs .container .chefs-pic .chef:hover .pic .social-icon {
+  right: 2%;
+}
+
+.chefs .container .chefs-pic .chef .pic .social-icon a {
+  padding: 6px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #37373f66;
+  transition: color 0.3s linear;
+}
+
+.chefs .container .chefs-pic .chef .pic .social-icon a:hover {
+  color: #37373f;
+}
+
+.chefs .container .chefs-pic .chef .disc {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.chefs .container .chefs-pic .chef .disc h3 {
+  color: var(--black-color);
+}
+.chefs .container .chefs-pic .chef .disc span {
+  color: var(--par-content);
+}
+.chefs .container .chefs-pic .chef .disc p {
+  color: var(--par-content);
+}
+
+/* 
+=======================================================
+                    End Chefs
 =======================================================
 */
