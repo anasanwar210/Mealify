@@ -16,7 +16,7 @@
   --title-content: #37373f;
   --par-content: #37373f;
   --hover-light: #e61414;
-
+  
   --white-color: #fff;
   --black-color: #000;
 
@@ -48,8 +48,12 @@ a {
 input {
   display: none;
 }
-input:checked,
-input:checked + * {
+
+:root:has(#mode:checked) body{
+  background-color: #202020;
+}
+
+:root:has(#mode:checked) {
   --main-color: #c17e1f;
 
   --logo-color: #fff;
@@ -64,6 +68,12 @@ input:checked + * {
   --black-color: #fff;
   --white-color: #000;
 }
+
+:root:has(#mode:checked) .chefs .container .chefs-pic .chef .pic::after{
+  background-image: url(../images/chefs/team-shape-dark.svg);
+  
+}
+
 
 .dark-mode {
   display: flex;
@@ -86,11 +96,11 @@ input:checked + * {
   display: none;
 }
 
-:root:has(.mode:checked) .dark-mode label.moon {
+:root:has(#mode:checked) .dark-mode label.moon {
   display: none;
 }
 
-:root:has(.mode:checked) .dark-mode label.sun {
+:root:has(#mode:checked) .dark-mode label.sun {
   display: block;
 }
 
@@ -482,6 +492,8 @@ header .content .btn-link .watch-video a {
 .chefs .container .chefs-pic .chef .pic {
   position: relative;
 }
+
+
 
 .chefs .container .chefs-pic .chef .pic::after {
   content: "";

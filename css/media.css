@@ -10,6 +10,10 @@
     width: 90%;
     margin: auto;
   }
+
+  .chefs .container .chefs-pic .chef .pic::after {
+    bottom: -8%;
+  }
 }
 
 @media (min-width: 767px) and (max-width: 992px) {
@@ -43,7 +47,6 @@
   header .content .disc,
   header .content .img-contain {
     padding: 7% 2% 0;
-    /* padding: 3% 3%; */
   }
 
   header .content .btn-link {
