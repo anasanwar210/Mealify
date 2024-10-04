@@ -16,7 +16,9 @@
   --title-content: #37373f;
   --par-content: #37373f;
   --hover-light: #e61414;
-  
+
+  --chef-bcg: #fff;
+
   --white-color: #fff;
   --black-color: #000;
 
@@ -49,7 +51,7 @@ input {
   display: none;
 }
 
-:root:has(#mode:checked) body{
+:root:has(#mode:checked) body {
   background-color: #202020;
 }
 
@@ -64,44 +66,10 @@ input {
   --par-content: #9f9f9f;
   --nav-background-color: #000;
   --hover-light: #d78c23;
+  --chef-bcg: #161616;
 
   --black-color: #fff;
   --white-color: #000;
-}
-
-:root:has(#mode:checked) .chefs .container .chefs-pic .chef .pic::after{
-  background-image: url(../images/chefs/team-shape-dark.svg);
-  
-}
-
-
-.dark-mode {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  right: 15%;
-  padding: 0 5%;
-  color: var(--icon-color);
-  font-size: 25px;
-  z-index: 10;
-}
-
-.dark-mode label {
-  cursor: pointer;
-  position: absolute;
-}
-
-.dark-mode label.sun {
-  display: none;
-}
-
-:root:has(#mode:checked) .dark-mode label.moon {
-  display: none;
-}
-
-:root:has(#mode:checked) .dark-mode label.sun {
-  display: block;
 }
 
 /* 
@@ -157,11 +125,11 @@ header .container nav .navbar-container label {
 }
 
 header .container nav .navbar-container label.open-menu {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   right: 2%;
-  transform: translateY(-50%);
-  padding: 1% 2%;
+  transform: translateY(-50%); */
+  /* padding: 1% 2%; */
   cursor: pointer;
   /* z-index: -1; */
 }
@@ -190,16 +158,14 @@ header .container nav .navbar-container label > i {
   font-weight: 900;
 }
 
-header .container nav .navbar-container input:checked ~ .nav-links {
+:root:has(#menu:checked) .nav-links {
   right: 0;
 }
 
-header .container nav .navbar-container input:checked ~ .overlay {
-  /* background-color: rgba(0, 0, 0, 0.4); */
+:root:has(#menu:checked) .overlay {
   height: 100%;
   width: 100%;
   position: fixed;
-  /* z-index: 9; */
 }
 
 header .container nav .navbar-container .nav-links {
@@ -248,36 +214,41 @@ header .container nav .navbar-container .nav-links li a {
   padding: 2% 0;
 }
 
+header .container nav .navbar-container .nav-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: row; */
+  width: 60px;
+}
+
 header .container nav .navbar-container .nav-links li:hover a {
   color: var(--main-color);
 }
 
-/* header .container nav .navbar-container .dark-mode {
+header .container nav .navbar-container .nav-icon .dark-mode {
   display: flex;
   align-items: center;
-  position: relative;
-  left: 10%;
-  padding: 0 5%;
-} */
-
-/* header .container nav .navbar-container .dark-mode label {
-  cursor: pointer;
+  color: var(--icon-color);
+  font-size: 25px;
 }
 
-header .container nav .navbar-container .dark-mode label.sun {
+header .container nav .navbar-container .nav-icon .dark-mode label {
+  cursor: pointer;
+  position: absolute;
+}
+
+header .container nav .navbar-container .nav-icon .dark-mode label.sun {
   display: none;
 }
 
-header .container nav .navbar-container .dark-mode input:checked ~ label.sun {
+:root:has(#mode:checked) .dark-mode label.moon {
+  display: none;
+}
+
+:root:has(#mode:checked) .dark-mode label.sun {
   display: block;
 }
-header .container nav .navbar-container .dark-mode input:checked ~ label.moon {
-  display: none;
-}
-
-header .container nav .navbar-container .dark-mode label {
-  position: absolute;
-} */
 
 /* End Navigation */
 
@@ -369,7 +340,6 @@ header .content .btn-link {
 
 header .content .btn-link .table {
   padding: 3% 6%;
-  margin-bottom: 3%;
   border-radius: 20px;
   border-top-left-radius: 0;
   background-color: var(--main-color);
@@ -384,6 +354,10 @@ header .content .btn-link .table a {
   font-size: 16px;
   font-weight: 400;
   color: var(--white-color);
+}
+
+header .content .btn-link .watch-video {
+  margin: 4% 0;
 }
 
 header .content .btn-link .watch-video a {
@@ -443,7 +417,7 @@ header .content .btn-link .watch-video a {
 */
 
 .chefs .container {
-  padding: 10% 0;
+  padding: 5% 0;
   text-align: center;
 }
 
@@ -482,6 +456,7 @@ header .content .btn-link .watch-video a {
   border-radius: 8px;
   transition: transform 0.2s linear, box-shadow 0.2s linear;
   overflow: hidden;
+  background-color: var(--chef-bcg);
 }
 
 .chefs .container .chefs-pic .chef:hover {
@@ -493,8 +468,6 @@ header .content .btn-link .watch-video a {
   position: relative;
 }
 
-
-
 .chefs .container .chefs-pic .chef .pic::after {
   content: "";
   background-image: url(../images/chefs/team-shape.svg);
@@ -504,6 +477,10 @@ header .content .btn-link .watch-video a {
   left: 0;
   width: 100%;
   height: 100px;
+}
+
+:root:has(#mode:checked) .chefs .container .chefs-pic .chef .pic::after {
+  background-image: url(../images/chefs/team-shape-dark.svg);
 }
 
 .chefs .container .chefs-pic .chef .pic img {
@@ -540,6 +517,7 @@ header .content .btn-link .watch-video a {
 
 .chefs .container .chefs-pic .chef .disc {
   width: 90%;
+  padding: 8% 0 3%;
   margin: auto;
   position: relative;
   z-index: 1;
@@ -547,12 +525,19 @@ header .content .btn-link .watch-video a {
 
 .chefs .container .chefs-pic .chef .disc h3 {
   color: var(--black-color);
+  /* margin-top: 10%; */
+  margin-bottom: 0;
+  font-size: 18px;
 }
 .chefs .container .chefs-pic .chef .disc span {
   color: var(--par-content);
+  font-size: 14px;
+  margin: 50% 0;
 }
 .chefs .container .chefs-pic .chef .disc p {
   color: var(--par-content);
+  font-size: 15px;
+  margin: 2% 0;
 }
 
 /* 
