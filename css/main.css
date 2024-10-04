@@ -47,8 +47,7 @@ a {
 input {
   display: none;
 }
-
-body:has(:checked) {
+input:checked ,input:checked + * {
   --main-color: #c17e1f;
 
   --logo-color: #fff;
