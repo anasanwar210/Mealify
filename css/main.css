@@ -51,6 +51,7 @@
   --white-color: #000;
 }
 
+
 body {
   font-family: "Roboto", sans-serif;
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -61,7 +62,7 @@ body {
   text-transform: capitalize;
 }
 
-::selection{
+::selection {
   background-color: var(--selection-bcg);
   color: var(--selection-color);
 }
@@ -70,7 +71,7 @@ body {
   font-family: "Amatic SC", sans-serif;
 }
 
-.inter{
+.inter {
   font-family: "Inter", sans-serif;
 }
 
@@ -485,14 +486,15 @@ header .content .btn-link .watch-video a {
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
-.chefs .container .chefs-pic .chef .pic {
+.chefs .container .chefs-pic .chef .pic{
   position: relative;
 }
 
 .chefs .container .chefs-pic .chef .pic::after {
   content: "";
   background-image: url(../images/chefs/team-shape.svg);
-  /* background-repeat: no-repeat; */
+  background-position: bottom;
+  background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -506,6 +508,7 @@ header .content .btn-link .watch-video a {
 
 .chefs .container .chefs-pic .chef .pic img {
   width: 100%;
+  
 }
 
 .chefs .container .chefs-pic .chef .pic .social-icon {

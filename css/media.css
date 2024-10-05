@@ -161,10 +161,6 @@
     width: 48%;
     margin-left: auto;
   }
-
-  .chefs .container .chefs-pic .chef .pic::after {
-    bottom: -10%;
-  }
 }
 
 @media (min-width: 992px) {
@@ -183,9 +179,6 @@
     margin: 0 10px;
   }
 
-  .chefs .container .chefs-pic .chef .pic::after {
-    bottom: -20%;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -203,17 +196,8 @@
     margin-left: auto;
     margin: 0 10px;
   }
-
-  .chefs .container .chefs-pic .chef .pic::after {
-    bottom: -13%;
-  }
 }
 
-@media (min-width: 1300px) {
-  .chefs .container .chefs-pic .chef .pic::after {
-    bottom: -8%;
-  }
-}
 
 /* 
 =======================================================
