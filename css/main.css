@@ -51,7 +51,6 @@
   --white-color: #000;
 }
 
-
 body {
   font-family: "Roboto", sans-serif;
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -182,12 +181,6 @@ header .container nav .navbar-container label > i {
 
 :root:has(#menu:checked) .nav-links {
   right: 0;
-}
-
-:root:has(#menu:checked) .overlay {
-  height: 100%;
-  width: 100%;
-  position: fixed;
 }
 
 header .container nav .navbar-container .nav-links {
@@ -486,7 +479,7 @@ header .content .btn-link .watch-video a {
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
-.chefs .container .chefs-pic .chef .pic{
+.chefs .container .chefs-pic .chef .pic {
   position: relative;
 }
 
@@ -494,7 +487,7 @@ header .content .btn-link .watch-video a {
   content: "";
   background-image: url(../images/chefs/team-shape.svg);
   background-position: bottom;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -508,7 +501,6 @@ header .content .btn-link .watch-video a {
 
 .chefs .container .chefs-pic .chef .pic img {
   width: 100%;
-  
 }
 
 .chefs .container .chefs-pic .chef .pic .social-icon {
