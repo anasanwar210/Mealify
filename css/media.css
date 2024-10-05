@@ -5,18 +5,25 @@
 */
 
 /* Start Navigation Bar */
+
+@media (min-width: 595px) and (max-width: 767px) {
+  header .container nav .navbar-container {
+    width: 80%;
+  }
+}
+
 @media (max-width: 767px) {
   header .content {
     width: 90%;
     margin: auto;
   }
-
-  .chefs .container .chefs-pic .chef .pic::after {
-    bottom: -8%;
-  }
 }
 
 @media (min-width: 767px) and (max-width: 992px) {
+  header .container nav .navbar-container {
+    width: 80%;
+  }
+
   header .content {
     width: 80%;
     margin: auto;
@@ -59,7 +66,7 @@
 }
 
 @media (min-width: 1200px) {
-  header .container nav .navbar-container .logo{
+  header .container nav .navbar-container .logo {
     order: -1;
   }
 
@@ -131,7 +138,14 @@
 =======================================================
 */
 
-@media (min-width: 767px) and (max-width: 992px) {
+@media (min-width: 595px) {
+  .chefs .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 767px) {
   .chefs .container {
     width: 90%;
     margin: auto;
@@ -149,11 +163,11 @@
   }
 
   .chefs .container .chefs-pic .chef .pic::after {
-    bottom: -8%;
+    bottom: -10%;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) {
   .chefs .container {
     width: 80%;
     margin: auto;
@@ -204,5 +218,53 @@
 /* 
 =======================================================
                       End Chefs
+=======================================================
+*/
+
+/* 
+=======================================================
+                    Start Gallery
+=======================================================
+*/
+
+@media (min-width: 592px) {
+  .gallery .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 767px) {
+  .gallery .container .meals {
+    column-count: 2;
+    /* grid-template-columns:  repeat(2, auto); */
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery .container {
+    width: 90%;
+  }
+
+  .gallery .container .meals {
+    column-count: 3;
+    /* flex-wrap: wrap; */
+    /* grid-template-columns:  repeat(2, auto); */
+  }
+  
+  .levitation-pizza{
+    order: -1;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .gallery .container {
+    width: 80%;
+  }
+
+}
+/* 
+=======================================================
+                    End Gallery
 =======================================================
 */
