@@ -1,8 +1,24 @@
+/* Reset */
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  display: none;
+}
+
+/* Css Variables */
 
 :root {
   --main-color: #ce1212;
@@ -51,41 +67,6 @@
   --white-color: #000;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin: 0;
-  padding: 0;
-  text-transform: capitalize;
-}
-
-::selection {
-  background-color: var(--selection-bcg);
-  color: var(--selection-color);
-}
-
-.amatic {
-  font-family: "Amatic SC", sans-serif;
-}
-
-.inter {
-  font-family: "Inter", sans-serif;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-input {
-  display: none;
-}
-
 :root:not(#mode:checked) :where(body, section, header, footer) {
   transition: all 0.3s linear;
 }
@@ -97,6 +78,62 @@ input {
 :root:has(#mode:checked) body {
   background-color: #202020;
   transition: all 0.3s linear;
+}
+
+::selection {
+  background-color: var(--selection-bcg);
+  color: var(--selection-color);
+}
+
+/* Font Family */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.amatic {
+  font-family: "Amatic SC", sans-serif;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Global Css Role */
+
+:where(.chefs, .gallery, .contact) .container {
+  width: 95%;
+  margin: auto;
+  padding: 5% 0;
+  text-align: center;
+}
+
+:where(.chefs, .gallery, .contact) .title {
+  text-align: center;
+}
+
+:where(.chefs, .gallery, .contact) .title h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--title-content);
+  text-transform: uppercase;
+}
+
+:where(.chefs, .gallery, .contact) .title p {
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--black-color);
+  margin-top: 0;
+}
+
+:where(.chefs, .gallery, .contact) .container .title p > span {
+  color: var(--main-color);
 }
 
 /* 
@@ -431,33 +468,6 @@ header .content .btn-link .watch-video a {
 =======================================================
 */
 
-.chefs .container {
-  padding: 5% 0;
-  text-align: center;
-}
-
-.chefs .container .title {
-  text-align: center;
-}
-
-.chefs .container .title h2 {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--title-content);
-  text-transform: uppercase;
-}
-
-.chefs .container .title p {
-  font-size: 50px;
-  font-weight: 400;
-  color: var(--black-color);
-  margin-top: 0;
-}
-
-.chefs .container .title p > span {
-  color: var(--main-color);
-}
-
 .chefs .container .chefs-pic {
   display: flex;
   flex-direction: column;
@@ -465,7 +475,6 @@ header .content .btn-link .watch-video a {
 }
 
 .chefs .container .chefs-pic .chef {
-  width: 95%;
   margin: auto;
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -572,38 +581,7 @@ header .content .btn-link .watch-video a {
   background-color: var(--header-content);
 }
 
-.gallery .container {
-  width: 95%;
-  margin: auto;
-  padding: 5% 0;
-  text-align: center;
-}
-
-.gallery .container .title {
-  text-align: center;
-}
-
-.gallery .container .title h2 {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--title-content);
-  text-transform: uppercase;
-}
-
-.gallery .container .title p {
-  font-size: 50px;
-  font-weight: 400;
-  color: var(--black-color);
-  margin-top: 0;
-}
-
-.gallery .container .title p > span {
-  color: var(--main-color);
-}
-
 .gallery .container .meals {
-  /* display: grid;
-  gap: 10px; */
   column-count: 1;
   column-gap: 30px;
 }
@@ -661,5 +639,118 @@ header .content .btn-link .watch-video a {
 /* 
 =======================================================
                     End Gallery
+=======================================================
+*/
+
+/* 
+=======================================================
+                    Start Contact-US 
+=======================================================
+*/
+
+.contact .container .map {
+  width: 100%;
+}
+
+.contact .container .map iframe {
+  width: 100%;
+}
+
+.contact .container ul.contact-info {
+  /* background-color: red; */
+  padding: 0;
+}
+
+.contact .container ul.contact-info li {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--white-color);
+  margin-bottom: 3%;
+  padding: 25px;
+  text-align: left;
+}
+
+.contact .container ul.contact-info li div.icon {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  /* padding: 10px; */
+  border-radius: 50%;
+}
+
+.contact .container ul.contact-info li div.icon i {
+  font-size: 18px;
+  color: var(--white-color);
+}
+
+.contact .container ul.contact-info li div.info {
+  padding: 0 10px;
+}
+
+.contact .container ul.contact-info li div.info h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #7d7d7d;
+}
+
+.contact .container ul.contact-info li div.info p {
+  margin-top: 5px;
+  color: var(--black-color);
+}
+
+.contact .container ul.contact-info li div.info p > span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black-color);
+}
+
+.contact .container form {
+  background-color: var(--nav-background-color);
+  padding: 4%;
+  height: 400px;
+  text-align: center;
+}
+
+.contact .container form :is(input, textarea) {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  line-height: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  transition: outline 0.3s linear;
+  border: 1px solid #ccc;
+}
+
+.contact .container form :is(input:focus, textarea:focus) {
+  outline: 2px solid var(--main-color);
+}
+
+.contact .container form textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.contact .container form button {
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin: 25px 0px 0px;
+  padding: 12px 40px;
+  border-radius: 20px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+/* 
+=======================================================
+                    End Contact-US
 =======================================================
 */

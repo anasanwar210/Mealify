@@ -178,7 +178,6 @@
     margin-left: auto;
     margin: 0 10px;
   }
-
 }
 
 @media (min-width: 1200px) {
@@ -197,7 +196,6 @@
     margin: 0 10px;
   }
 }
-
 
 /* 
 =======================================================
@@ -234,21 +232,78 @@
     /* flex-wrap: wrap; */
     /* grid-template-columns:  repeat(2, auto); */
   }
-  
-  .levitation-pizza{
+
+  .levitation-pizza {
     order: -1;
   }
-
 }
 
 @media (min-width: 1200px) {
   .gallery .container {
     width: 80%;
   }
-
 }
+
 /* 
 =======================================================
                     End Gallery
+=======================================================
+*/
+
+/* 
+=======================================================
+                      Start Contact-US
+=======================================================
+*/
+
+@media (min-width: 592px) {
+  .contact .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 767px) {
+  .contact .container {
+    width: 95%;
+  }
+
+  .contact .container ul.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact .container ul.contact-info li {
+    width: calc((100% - 10px) / 2);
+    margin-bottom: 1%;
+    padding: 10px;
+  }
+
+  .contact .container ul.contact-info li:nth-child(odd) {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact .container form {
+    padding: 2%;
+  }
+  .contact .container form > div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact .container form > div input {
+    width: calc((100% - 10px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact .container {
+    width: 80%;
+  }
+}
+
+/* 
+=======================================================
+                      End Contact-US
 =======================================================
 */
