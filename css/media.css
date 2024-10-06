@@ -97,8 +97,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 90%;
-    margin: auto; */
+    width: 90%;
+    margin: auto;
     padding: 2% 3%;
   }
 
@@ -142,7 +142,8 @@
 
   header .content {
     height: 100vh;
-    width: 80%;
+    width: 90%;
+    margin: auto;
   }
 
   header .content .btn-link {
@@ -209,7 +210,7 @@
 
 @media (min-width: 1200px) {
   .chefs .container {
-    width: 95%;
+    width: 90%;
     margin: auto;
   }
   .chefs .container .chefs-pic {
@@ -259,8 +260,6 @@
 
   .gallery .container .meals {
     column-count: 3;
-    /* flex-wrap: wrap; */
-    /* grid-template-columns:  repeat(2, auto); */
   }
 
   .levitation-pizza {
@@ -270,7 +269,8 @@
 
 @media (min-width: 1200px) {
   .gallery .container {
-    width: 95%;
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -328,7 +328,8 @@
 
 @media (min-width: 1200px) {
   .contact .container {
-    width: 95%;
+    width: 90%;
+    margin: auto;
   }
 }
 

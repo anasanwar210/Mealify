@@ -241,8 +241,7 @@ nav .container .nav-links li a {
 nav .container .nav-icon {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* flex-direction: row; */
+  align-items: center; 
   width: 60px;
 }
 
@@ -568,7 +567,6 @@ header .content .btn-link .watch-video a {
   font-size: 0;
   overflow: hidden;
   border: 4px solid var(--white-pure);
-
   margin-bottom: 10px;
 }
 
