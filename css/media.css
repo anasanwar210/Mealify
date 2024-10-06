@@ -7,9 +7,16 @@
 /* Start Navigation Bar */
 
 @media (min-width: 595px) and (max-width: 767px) {
-  header .container nav .navbar-container {
+  nav .container {
     width: 80%;
+    margin: auto;
   }
+
+  nav .container .nav-links {
+    width: 50%;
+  }
+
+
 }
 
 @media (max-width: 767px) {
@@ -20,8 +27,17 @@
 }
 
 @media (min-width: 767px) and (max-width: 992px) {
-  header .container nav .navbar-container {
+  nav {
+    padding: 3% 3%;
+  }
+
+  nav .container {
     width: 80%;
+    margin: auto;
+  }
+
+  nav .container .nav-links {
+    width: 40%;
   }
 
   header .content {
@@ -31,9 +47,16 @@
 }
 
 @media (min-width: 992px) {
+  nav {
+    padding: 3% 3%;
+  }
+
+  nav .container .nav-links {
+    width: 30%;
+  }
+
   header .content {
     width: 100%;
-    height: 60vh;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
@@ -66,20 +89,25 @@
 }
 
 @media (min-width: 1200px) {
-  header .container nav .navbar-container .logo {
-    order: -1;
+  nav{
+    padding: 0;
   }
 
-  header .container nav .navbar-container {
+  nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    margin: auto;
-    padding: 1%;
+    /* width: 90%;
+    margin: auto; */
+    padding: 2% 3%;
   }
 
-  header .container nav .navbar-container .nav-links {
+  nav .container .logo {
+    order: -1;
+  }
+
+
+  nav .container .nav-links {
     position: static;
     right: 0%;
     left: 0;
@@ -91,11 +119,11 @@
     order: -1;
   }
 
-  header .container nav .navbar-container .nav-links li {
+  nav .container .nav-links li {
     padding: 10px 15px;
   }
 
-  header .container nav .navbar-container .nav-icon .dark-mode {
+  nav .container .nav-icon .dark-mode {
     display: flex;
     align-items: center;
     padding: 0 5%;
@@ -103,12 +131,12 @@
     font-size: 25px;
   }
 
-  header .container nav .navbar-container .overlay {
+  nav .container .overlay {
     display: none;
   }
 
-  header .container nav .navbar-container label.open-menu,
-  header .container nav .nav-links li.x-mark label.close-menu {
+  nav .container label.open-menu,
+  nav .container .nav-links li.x-mark label.close-menu {
     display: none;
   }
 
@@ -123,8 +151,6 @@
     width: 90%;
   }
 }
-
-/* End Navigation Bar */
 
 /* 
 =======================================================
@@ -165,24 +191,25 @@
 
 @media (min-width: 992px) {
   .chefs .container {
-    width: 80%;
+    width: 95%;
     margin: auto;
   }
   .chefs .container .chefs-pic {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 0;
   }
   .chefs .container .chefs-pic .chef {
-    width: calc(90% / 3);
-    margin-left: auto;
+    width: calc(( 100% - 60px) / 3);
+    /* margin-left: auto; */
     margin: 0 10px;
   }
 }
 
 @media (min-width: 1200px) {
   .chefs .container {
-    width: 80%;
+    width: 95%;
     margin: auto;
   }
   .chefs .container .chefs-pic {
@@ -216,15 +243,18 @@
 }
 
 @media (min-width: 767px) {
+  .gallery .container {
+    width: 90%;
+  }
+
   .gallery .container .meals {
     column-count: 2;
-    /* grid-template-columns:  repeat(2, auto); */
   }
 }
 
 @media (min-width: 992px) {
   .gallery .container {
-    width: 90%;
+    width: 95%;
   }
 
   .gallery .container .meals {
@@ -240,7 +270,7 @@
 
 @media (min-width: 1200px) {
   .gallery .container {
-    width: 80%;
+    width: 95%;
   }
 }
 
@@ -264,7 +294,7 @@
 
 @media (min-width: 767px) {
   .contact .container {
-    width: 95%;
+    width: 90%;
   }
 
   .contact .container ul.contact-info {
@@ -298,7 +328,7 @@
 
 @media (min-width: 1200px) {
   .contact .container {
-    width: 80%;
+    width: 95%;
   }
 }
 

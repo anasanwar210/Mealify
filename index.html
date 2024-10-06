@@ -41,48 +41,58 @@
   <body>
     <!-- 
     ====================================================
-    Start Header
+                          Start NavBar
     ====================================================
     -->
-    <header id="home" class="home">
+    <nav>
       <div class="container">
-        <nav>
-          <div class="navbar-container">
-            <div class="logo">
-              <h1><a href="index.html">mealify</a></h1>
-            </div>
-            <div class="nav-icon">
-              <div class="dark-mode">
-                <input type="checkbox" name="mode" id="mode" />
-                <label for="mode" class="moon">
-                  <i class="fa-solid fa-moon"></i>
-                </label>
-                <label for="mode" class="sun">
-                  <i class="fa-regular fa-sun"></i>
-                </label>
-              </div>
-
-              <div class="bars">
-                <input type="checkbox" name="menu" id="menu" />
-                <label for="menu" class="open-menu">
-                  <i class="fa-solid fa-bars"></i>
-                </label>
-              </div>
-            </div>
-            <ul class="nav-links">
-              <li class="x-mark">
-                <label for="menu" class="close-menu">
-                  <i class="fa-solid fa-xmark"></i>
-                </label>
-              </li>
-              <li class="active"><a href="#home">home</a></li>
-              <li><a href="#chefs">chefs</a></li>
-              <li><a href="#gallery">gallery</a></li>
-              <li><a href="#contact">contact</a></li>
-            </ul>
+        <div class="logo">
+          <h1><a href="index.html">mealify</a></h1>
+        </div>
+        <div class="nav-icon">
+          <div class="dark-mode">
+            <input type="checkbox" name="mode" id="mode" />
+            <label for="mode" class="moon">
+              <i class="fa-solid fa-moon"></i>
+            </label>
+            <label for="mode" class="sun">
+              <i class="fa-regular fa-sun"></i>
+            </label>
           </div>
-        </nav>
+
+          <div class="bars">
+            <input type="checkbox" name="menu" id="menu" />
+            <label for="menu" class="open-menu">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li class="x-mark">
+            <label for="menu" class="close-menu">
+              <i class="fa-solid fa-xmark"></i>
+            </label>
+          </li>
+          <li class="active"><a href="#home">home</a></li>
+          <li><a href="#chefs">chefs</a></li>
+          <li><a href="#gallery">gallery</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
       </div>
+    </nav>
+    <!-- 
+    ====================================================
+                          End NavBar
+    ====================================================
+    -->
+
+    <!-- 
+    ====================================================
+                          Start Header
+    ====================================================
+    -->
+
+    <header id="home" class="home">
       <div class="content">
         <div class="disc">
           <h2 class="amatic">
@@ -153,7 +163,7 @@
           </div>
           <div class="chef">
             <div class="pic">
-                <img src="images/chefs/chefs-2.jpg" alt="Walter White" />
+              <img src="images/chefs/chefs-2.jpg" alt="Walter White" />
               <div class="social-icon">
                 <a href=""><i class="fa-brands fa-twitter"></i></a>
                 <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -353,12 +363,23 @@
         </ul>
         <form>
           <div>
-            <input type="text" name="name" id="name" placeholder="Your Name">
-            <input type="email" name="email" id="email" placeholder="Your Email">
+            <input type="text" name="name" id="name" placeholder="Your Name" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+            />
           </div>
-          <input type="text" name="subject" id="subject" placeholder="Subject" required/>
-          <textarea name="msg" id="msg"  placeholder="Message"></textarea>
-          <button type="submit" >send message</button>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+            required
+          />
+          <textarea name="msg" id="msg" placeholder="Message"></textarea>
+          <button type="submit">send message</button>
         </form>
       </div>
     </section>

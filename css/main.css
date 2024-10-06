@@ -142,57 +142,48 @@ body {
 =======================================================
 */
 
-header {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--header-content);
-}
-
 /* Start Navigation */
 
-header .container nav {
+nav {
   background-color: var(--nav-background-color);
   position: fixed;
   width: 100%;
-  box-shadow: 0px 5px 5px var(--header-content);
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
   z-index: 10;
+  padding: 5% 3%;
 }
 
-header .container nav .navbar-container {
-  position: relative;
-  width: 100%;
-  padding: 2%;
-  margin: auto;
+nav .container {
   display: flex;
   justify-content: space-between;
 }
 
-header .container nav .navbar-container .logo h1 {
+nav .container .logo h1 {
   padding: 0;
   margin: 0;
 }
 
-header .container nav .navbar-container .logo h1 a {
+nav .container .logo h1 a {
   font-size: 30px;
   font-weight: 700;
   color: var(--logo-color);
 }
 
-header .container nav .navbar-container .logo a::after {
+nav .container .logo a::after {
   content: ".";
   font-size: 30px;
   color: var(--main-color);
 }
 
-header .container nav .navbar-container label {
+nav .container label {
   color: var(--icon-color);
 }
 
-header .container nav .navbar-container label.open-menu {
+nav .container label.open-menu {
   cursor: pointer;
 }
 
-header .container nav .navbar-container .nav-links li.x-mark label.close-menu {
+nav .container .nav-links li.x-mark label.close-menu {
   position: relative;
   top: 0;
   left: 90%;
@@ -201,17 +192,11 @@ header .container nav .navbar-container .nav-links li.x-mark label.close-menu {
   transition: color 0.5s ease-in-out;
 }
 
-header
-  .container
-  nav
-  .navbar-container
-  .nav-links
-  li.x-mark:hover
-  label.close-menu {
+nav .container .nav-links li.x-mark:hover label.close-menu {
   color: var(--main-color);
 }
 
-header .container nav .navbar-container label > i {
+nav .container label > i {
   font-size: 25px;
   font-weight: 900;
 }
@@ -220,7 +205,7 @@ header .container nav .navbar-container label > i {
   right: 0;
 }
 
-header .container nav .navbar-container .nav-links {
+nav .container .nav-links {
   position: absolute;
   right: -100%;
   background-color: var(--nav-background-color);
@@ -228,36 +213,24 @@ header .container nav .navbar-container .nav-links {
   margin: 0;
   width: 60%;
   height: 100vh;
-  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 15px 3px rgba(0, 0, 0, 0.25);
   transition: 0.75s ease-in-out;
   z-index: 11;
 }
 
-header .container nav .navbar-container .nav-links li {
+nav .container .nav-links li {
   padding: 15px 25px;
 }
 
-body:not(body:has(:target)) header .container nav .nav-links li a[href="#home"],
-body:has(.home:target) header .container nav .nav-links li a[href="#home"],
-body:has(.chefs:target) header .container nav .nav-links li a[href="#chefs"],
-body:has(.gallery:target)
-  header
-  .container
-  nav
-  .nav-links
-  li
-  a[href="#gallery"],
-body:has(.contact:target)
-  header
-  .container
-  nav
-  .nav-links
-  li
-  a[href="#contact"] {
+body:not(body:has(:target)) nav .container .nav-links li a[href="#home"],
+body:has(.home:target) nav .container .nav-links li a[href="#home"],
+body:has(.chefs:target) nav .container .nav-links li a[href="#chefs"],
+body:has(.gallery:target) nav .container .nav-links li a[href="#gallery"],
+body:has(.contact:target) nav .container .nav-links li a[href="#contact"] {
   color: var(--main-color);
 }
 
-header .container nav .navbar-container .nav-links li a {
+nav .container .nav-links li a {
   position: relative;
   font-size: 17px;
   font-weight: 600;
@@ -265,8 +238,7 @@ header .container nav .navbar-container .nav-links li a {
   transition: all 0.5s ease-in-out;
   padding: 2% 0;
 }
-
-header .container nav .navbar-container .nav-icon {
+nav .container .nav-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -274,23 +246,23 @@ header .container nav .navbar-container .nav-icon {
   width: 60px;
 }
 
-header .container nav .navbar-container .nav-links li:hover a {
+nav .container .nav-links li:hover a {
   color: var(--main-color);
 }
 
-header .container nav .navbar-container .nav-icon .dark-mode {
+nav .container .nav-icon .dark-mode {
   display: flex;
   align-items: center;
   color: var(--icon-color);
   font-size: 25px;
 }
 
-header .container nav .navbar-container .nav-icon .dark-mode label {
+nav .container .nav-icon .dark-mode label {
   cursor: pointer;
   position: absolute;
 }
 
-header .container nav .navbar-container .nav-icon .dark-mode label.sun {
+nav .container .nav-icon .dark-mode label.sun {
   display: none;
 }
 
@@ -306,12 +278,16 @@ header .container nav .navbar-container .nav-icon .dark-mode label.sun {
 
 /* Start Content */
 
+header {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--header-content);
+}
+
 header .content {
-  height: auto;
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  margin: auto;
+  padding: 40px 15px;
 }
 
 header .content .disc {
@@ -747,6 +723,10 @@ header .content .btn-link .watch-video a {
   border-radius: 20px;
   background-color: var(--main-color);
   color: var(--white-color);
+  transition: background-color 0.3s linear;
+}
+.contact .container form button:hover {
+  background-color: var(--hover-light);
 }
 
 /* 
