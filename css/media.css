@@ -338,3 +338,34 @@
                       End Contact-US
 =======================================================
 */
+
+/* 
+=======================================================
+                      Start Footer
+=======================================================
+*/
+
+@media (min-width: 576px) {
+  footer .container{
+    width: 90%;
+    margin: auto;
+  }
+  footer .container .subscribe form{
+    display: flex;
+    gap: 5px;
+  }
+  footer .container .subscribe form input {
+    /* width: 70%; */
+    font-size: 14px;
+    margin-bottom: 0;
+    flex-grow: 1;
+    flex: 1 0 70%;
+  }
+  
+  footer .container .subscribe form button {
+    width: 20%;
+    font-size: 13px;
+  }
+  
+}
+
