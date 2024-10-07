@@ -8,6 +8,7 @@
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 a {
@@ -241,7 +242,7 @@ nav .container .nav-links li a {
 nav .container .nav-icon {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   width: 60px;
 }
 
@@ -652,7 +653,6 @@ header .content .btn-link .watch-video a {
   align-items: center;
   width: 50px;
   height: 50px;
-  /* padding: 10px; */
   border-radius: 50%;
 }
 
@@ -685,7 +685,7 @@ header .content .btn-link .watch-video a {
 .contact .container form {
   background-color: var(--nav-background-color);
   padding: 4%;
-  height: 400px;
+  /* height: 400px; */
   text-align: center;
 }
 
@@ -713,6 +713,8 @@ header .content .btn-link .watch-video a {
 }
 
 .contact .container form button {
+  cursor: pointer;
+  text-transform: capitalize;
   outline: none;
   border: none;
   font-size: 15px;
@@ -730,5 +732,156 @@ header .content .btn-link .watch-video a {
 /* 
 =======================================================
                     End Contact-US
+=======================================================
+*/
+
+/* 
+=======================================================
+                    Start Footer
+=======================================================
+*/
+
+footer {
+  background-image: url(../images/footer/textured-metal-background.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  color: #fff;
+}
+
+footer .container {
+  padding: 40px 15px;
+  margin: auto;
+}
+
+footer .container .mealify > div {
+  display: flex;
+  gap: 10px;
+  /* justify-content: center; */
+  align-items: center;
+}
+footer .container .mealify > div img {
+  width: 40px;
+  height: 40px;
+}
+
+footer .container .mealify .logo {
+  padding: 0;
+  margin: 0;
+}
+
+footer .container .mealify .logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white-pure);
+}
+
+footer .container .mealify .logo::after {
+  content: ".";
+  font-size: 30px;
+  color: var(--main-color);
+}
+
+footer .container .mealify p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+footer .container .mealify h3 {
+  text-align: center;
+  font-size: 19px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #595959;
+}
+
+footer .container .mealify ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+footer .container .mealify ul li a {
+  font-size: 24px;
+  color: var(--white-pure);
+}
+
+footer .container .subscribe h3 {
+  font-size: 19px;
+  margin-bottom: 0;
+}
+
+footer .container .subscribe p {
+  margin: 15px 0;
+}
+
+footer .container .subscribe form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+}
+
+footer .container .subscribe form button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--main-color);
+  display: block;
+  color: var(--white-color);
+  transition: background-color 0.3s linear;
+}
+
+footer .container .subscribe form button:hover {
+  background-color: var(--hover-light);
+}
+
+footer .container .subscribe h3:nth-of-type(2) {
+  /* color: red; */
+  font-size: 19px;
+}
+
+footer .container .subscribe ul.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* row-gap: 10px; */
+  width: 100%;
+}
+
+footer .container .subscribe ul.quick-links li {
+  font-size: 16px;
+  width: calc(100% / 2 - 10px);
+  padding: 5px;
+  transition: background-color 0.3s linear, transform 0.3s linear;
+}
+
+footer .container .subscribe ul.quick-links li::before {
+  content: ">";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+footer .container .subscribe ul.quick-links li:hover {
+  background-color: rgb(34, 34, 34);
+  transform: translateX(10px);
+}
+
+footer .container .subscribe ul.quick-links li a{
+  color: var(--white-pure);
+}
+
+/* 
+=======================================================
+                    End Footer
 =======================================================
 */
