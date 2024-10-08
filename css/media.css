@@ -7,22 +7,8 @@
 /* Start Navigation Bar */
 
 @media (min-width: 595px) and (max-width: 767px) {
-  nav .container {
-    width: 80%;
-    margin: auto;
-  }
-
   nav .container .nav-links {
     width: 50%;
-  }
-
-
-}
-
-@media (max-width: 767px) {
-  header .content {
-    width: 90%;
-    margin: auto;
   }
 }
 
@@ -31,56 +17,53 @@
     padding: 3% 3%;
   }
 
-  nav .container {
-    width: 80%;
-    margin: auto;
-  }
-
   nav .container .nav-links {
     width: 40%;
   }
 
-  header .content {
-    width: 80%;
-    margin: auto;
+  header .content .img-contain {
+    text-align: center;
+  }
+  header .content .img-contain img {
+    width: 90%;
   }
 }
 
 @media (min-width: 992px) {
   nav {
-    padding: 3% 3%;
+    padding: 2% 0;
   }
-
   nav .container .nav-links {
     width: 30%;
   }
 
   header .content {
-    width: 100%;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 130px;
+    gap: 5%;
   }
 
   header .content .disc {
     text-align: left;
-    width: 45%;
   }
 
   header .content .img-contain {
     order: 1;
     padding-top: 0;
-    width: 40%;
+    margin: 0 0 0 auto;
+    text-align: right;
+  }
+  header .content .img-contain img {
+    width: 80%;
   }
 
   header .content .disc,
   header .content .img-contain {
-    padding: 7% 2% 0;
+    padding: 10% 2% 0;
   }
 
   header .content .btn-link {
-    width: 75%;
     padding-top: 3%;
     display: flex;
     justify-content: space-around;
@@ -89,7 +72,7 @@
 }
 
 @media (min-width: 1200px) {
-  nav{
+  nav {
     padding: 0;
   }
 
@@ -97,15 +80,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     margin: auto;
-    padding: 2% 3%;
+    padding: 1.5625rem 0.3125rem;
   }
 
   nav .container .logo {
     order: -1;
   }
-
 
   nav .container .nav-links {
     position: static;
@@ -142,8 +123,14 @@
 
   header .content {
     height: 100vh;
-    width: 90%;
     margin: auto;
+  }
+
+  header .content .img-contain {
+    text-align: right;
+  }
+  header .content .img-contain img {
+    width: 80%;
   }
 
   header .content .btn-link {
@@ -165,36 +152,19 @@
 =======================================================
 */
 
-@media (min-width: 595px) {
-  .chefs .container {
-    width: 80%;
-    margin: auto;
-  }
-}
-
 @media (min-width: 767px) {
-  .chefs .container {
-    width: 90%;
-    margin: auto;
-  }
-
   .chefs .container .chefs-pic {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
   .chefs .container .chefs-pic .chef {
-    width: 48%;
-    margin-left: auto;
+    width: calc(50% - 30px);
   }
 }
 
 @media (min-width: 992px) {
-  .chefs .container {
-    width: 95%;
-    margin: auto;
-  }
   .chefs .container .chefs-pic {
     display: flex;
     flex-direction: row;
@@ -202,17 +172,13 @@
     row-gap: 0;
   }
   .chefs .container .chefs-pic .chef {
-    width: calc(( 100% - 60px) / 3);
-    /* margin-left: auto; */
+    width: calc((100% - 60px) / 3);
+    margin-left: auto;
     margin: 0 10px;
   }
 }
 
 @media (min-width: 1200px) {
-  .chefs .container {
-    width: 90%;
-    margin: auto;
-  }
   .chefs .container .chefs-pic {
     display: flex;
     flex-direction: row;
@@ -237,40 +203,19 @@
 =======================================================
 */
 
-@media (min-width: 592px) {
-  .gallery .container {
-    width: 80%;
-  }
-}
-
 @media (min-width: 767px) {
-  .gallery .container {
-    width: 90%;
-  }
-
   .gallery .container .meals {
     column-count: 2;
   }
 }
 
 @media (min-width: 992px) {
-  .gallery .container {
-    width: 95%;
-  }
-
   .gallery .container .meals {
     column-count: 3;
   }
 
   .levitation-pizza {
     order: -1;
-  }
-}
-
-@media (min-width: 1200px) {
-  .gallery .container {
-    width: 90%;
-    margin: auto;
   }
 }
 
@@ -286,17 +231,7 @@
 =======================================================
 */
 
-@media (min-width: 592px) {
-  .contact .container {
-    width: 80%;
-  }
-}
-
 @media (min-width: 767px) {
-  .contact .container {
-    width: 90%;
-  }
-
   .contact .container ul.contact-info {
     display: flex;
     flex-wrap: wrap;
@@ -326,13 +261,6 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .contact .container {
-    width: 90%;
-    margin: auto;
-  }
-}
-
 /* 
 =======================================================
                       End Contact-US
@@ -346,26 +274,56 @@
 */
 
 @media (min-width: 576px) {
-  footer .container{
-    width: 90%;
-    margin: auto;
-  }
-  footer .container .subscribe form{
+  footer .container .subscribe form {
     display: flex;
     gap: 5px;
   }
   footer .container .subscribe form input {
-    /* width: 70%; */
     font-size: 14px;
     margin-bottom: 0;
     flex-grow: 1;
     flex: 1 0 70%;
   }
-  
+
   footer .container .subscribe form button {
     width: 20%;
     font-size: 13px;
   }
-  
 }
 
+@media (min-width: 767px) and (max-width: 1200px) {
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  footer .container .mealify {
+    width: calc(50% - 20px);
+    padding: 0 1%;
+    order: -2;
+  }
+
+  footer .container .details {
+    order: -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .container :where(.mealify, .subscribe, .details) {
+    padding: 10px;
+  }
+
+  footer .container .mealify {
+    width: 40%;
+  }
+
+  footer .container .details {
+    width: 40%;
+  }
+}

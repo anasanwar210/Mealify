@@ -1,0 +1,227 @@
+/* 
+==========================================================
+                        For Containers
+==========================================================
+*/
+
+/* XS */
+@media (max-width: 640px) {
+}
+
+/* SM */
+@media (min-width: 640px) {
+  .container-sm-100 {
+    width: 100%;
+    margin: auto;
+  }
+  .container-sm-95 {
+    width: 95%;
+    margin: auto;
+  }
+  .container-sm-90 {
+    width: 90%;
+    margin: auto;
+  }
+  .container-sm-80 {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* MD */
+@media (min-width: 768px) {
+  .container-md-100 {
+    width: 100%;
+    margin: auto;
+  }
+  .container-md-95 {
+    width: 95%;
+    margin: auto;
+  }
+  .container-md-90 {
+    width: 90%;
+    margin: auto;
+  }
+  .container-md-80 {
+    width: 80%;
+    margin: auto;
+  }
+}
+/* LG */
+@media (min-width: 1024px) {
+  .container-lg-100 {
+    width: 100%;
+    margin: auto;
+  }
+  .container-lg-95 {
+    width: 95%;
+    margin: auto;
+  }
+  .container-lg-90 {
+    width: 90%;
+    margin: auto;
+  }
+  .container-lg-80 {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* XL */
+@media (min-width: 1280px) {
+  .container-xl-100 {
+    width: 100%;
+    margin: auto;
+  }
+  .container-xl-95 {
+    width: 95%;
+    margin: auto;
+  }
+  .container-xl-90 {
+    width: 90%;
+    margin: auto;
+  }
+  .container-xl-80 {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* XXL */
+@media (min-width: 1536px) {
+  .container-xxl-100 {
+    width: 100%;
+    margin: auto;
+  }
+  .container-xxl-95 {
+    width: 95%;
+    margin: auto;
+  }
+  .container-xxl-90 {
+    width: 90%;
+    margin: auto;
+  }
+  .container-xxl-80 {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* 
+==========================================================
+                        For Items
+==========================================================
+*/
+
+/* XS */
+@media (max-width: 640px) {
+}
+
+/* SM */
+@media (min-width: 640px) {
+  .sm-100 {
+    width: 100%;
+  }
+  .sm-50 {
+    width: 50%;
+  }
+  .sm-33 {
+    width: 33.333%;
+  }
+  .sm-25 {
+    width: 25%;
+  }
+  .sm-20 {
+    width: 20%;
+  }
+  .sm-16 {
+    width: 16.66%;
+  }
+}
+
+/* MD */
+@media (min-width: 768px) {
+  .md-100 {
+    width: 100%;
+  }
+  .md-50 {
+    width: 50%;
+  }
+  .md-33 {
+    width: 33.333%;
+  }
+  .md-25 {
+    width: 25%;
+  }
+  .md-20 {
+    width: 20%;
+  }
+  .md-16 {
+    width: 16.66%;
+  }
+}
+/* LG */
+@media (min-width: 1024px) {
+  .lg-100 {
+    width: 100%;
+  }
+  .lg-50 {
+    width: 50%;
+  }
+  .lg-33 {
+    width: 33.333%;
+  }
+  .lg-25 {
+    width: 25%;
+  }
+  .lg-20 {
+    width: 20%;
+  }
+  .lg-16 {
+    width: 16.66%;
+  }
+}
+
+/* XL */
+@media (min-width: 1280px) {
+  .xl-100 {
+    width: 100%;
+  }
+  .xl-50 {
+    width: 50%;
+  }
+  .xl-33 {
+    width: 33.333%;
+  }
+  .xl-25 {
+    width: 25%;
+  }
+  .xl-20 {
+    width: 20%;
+  }
+  .xl-16 {
+    width: 16.66%;
+  }
+}
+
+/* XXL */
+@media (min-width: 1536px) {
+  .xxl-100 {
+    width: 100%;
+  }
+  .xxl-50 {
+    width: 50%;
+  }
+  .xxl-33 {
+    width: 33.333%;
+  }
+  .xxl-25 {
+    width: 25%;
+  }
+  .xxl-20 {
+    width: 20%;
+  }
+  .xxl-16 {
+    width: 16.66%;
+  }
+}
