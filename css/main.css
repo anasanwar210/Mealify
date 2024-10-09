@@ -19,6 +19,23 @@ input {
   display: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+  border-left: 1px solid #eee;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #202020;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Css Variables */
 
 :root {
@@ -28,14 +45,16 @@ input {
   --icon-color: #000;
   --nav-background-color: #fff;
   --nav-hover-color: #000;
-
+  --navbar-link-color-light:#7f7f90;
+  --navbar-link-color-dark:#7f7f90;
   --header-content: #eee;
   --title-content: #37373f;
   --par-content: #37373f;
   --hover-light: #e61414;
 
   --chef-bcg: #fff;
-
+  --chef-para: #9f9f9f;
+  --chef-title: #212529;
   --meal-bcg-light: #fff;
 
   --par-pure: #ddd;
@@ -50,7 +69,7 @@ input {
 
 :root:has(#mode:checked) {
   --main-color: #c17e1f;
-
+  --navbar-link-color-light: #9f9f9f;
   --logo-color: #fff;
   --icon-color: #fff;
   --title-content: #fff;
@@ -60,7 +79,7 @@ input {
   --nav-background-color: #171717;
   --hover-light: #d78c23;
   --chef-bcg: #161616;
-
+  --chef-title: #fff;
   --selection-bcg: #916220;
   --selection-color: #202020;
 
@@ -96,6 +115,8 @@ body {
   margin: 0;
   padding: 0;
   text-transform: capitalize;
+
+  scrollbar-width: 1000px;
 }
 
 .amatic {
@@ -220,7 +241,27 @@ nav .container .nav-links {
 }
 
 nav .container .nav-links li {
+  position: relative;
   padding: 15px 25px;
+}
+
+nav .container .nav-links li a::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  height: 30px;
+  border-bottom:2px solid var(--main-color) ;
+  transition: width 0.3s linear;
+}
+
+nav .container .nav-links li:hover a::after {
+  color: var(--main-color);
+  width: 100%;
+}
+
+nav .container .nav-links li:hover a {
+  color: var(--black-color);
 }
 
 body:not(body:has(:target)) nav .container .nav-links li a[href="#home"],
@@ -228,26 +269,28 @@ body:has(.home:target) nav .container .nav-links li a[href="#home"],
 body:has(.chefs:target) nav .container .nav-links li a[href="#chefs"],
 body:has(.gallery:target) nav .container .nav-links li a[href="#gallery"],
 body:has(.contact:target) nav .container .nav-links li a[href="#contact"] {
-  color: var(--main-color);
+  color: var(--black-color);
+  border-bottom:2px solid var(--main-color) ;
+}
+
+nav .container .nav-links li:has(:target) a::after:hover{
+  display: none;
 }
 
 nav .container .nav-links li a {
   position: relative;
   font-size: 17px;
   font-weight: 600;
-  color: #7f7f90;
+  color: var(--navbar-link-color-light);
   transition: all 0.5s ease-in-out;
-  padding: 2% 0;
+  padding: 3px 0;
 }
+
 nav .container .nav-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 60px;
-}
-
-nav .container .nav-links li:hover a {
-  color: var(--main-color);
 }
 
 nav .container .nav-icon .dark-mode {
@@ -315,44 +358,27 @@ header .content .img-contain {
 }
 
 header .content .img-contain img:hover {
-  animation: dance 1s infinite;
+  animation: dance 0.5s infinite;
 }
 
 @keyframes dance {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
   }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
+  25% {
+    transform: translate(-1px, -1px) rotate(-1deg);
   }
   50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
+    transform: translate(-2px, 0px) rotate(1deg);
   }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
+  75% {
+    transform: translate(2px, 2px) rotate(0deg);
   }
   100% {
-    transform: translate(1px, -2px) rotate(-1deg);
+    transform: translate(1px, 1px) rotate(1deg);
   }
 }
+
 header .content .img-contain img {
   width: 100%;
   filter: drop-shadow(5px 5px 10px var(--drop-shadow));
@@ -360,9 +386,8 @@ header .content .img-contain img {
 
 header .content .btn-link {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 4% 0;
 }
 
@@ -400,8 +425,8 @@ header .content .btn-link .watch-video:hover a {
 
 header .content .btn-link .watch-video .linear-gradient {
   display: flex;
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   background-image: linear-gradient(
     to right,
     var(--main-color) 0 50%,
@@ -415,15 +440,15 @@ header .content .btn-link .watch-video .linear-gradient i {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
+  width: 40px;
+  height: 40px;
   position: relative;
-  height: 35px;
-  background-color: var(--white-color);
-  border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
   z-index: -1;
+  background-color: var(--white-color);
 }
 
 header .content .btn-link .watch-video a .word {
@@ -525,18 +550,18 @@ header .content .btn-link .watch-video a {
 }
 
 .chefs .container .chefs-pic .chef .disc h3 {
-  color: var(--black-color);
+  color: var(--chef-title);
   /* margin-top: 10%; */
   margin-bottom: 0;
   font-size: 18px;
 }
 .chefs .container .chefs-pic .chef .disc span {
-  color: var(--par-content);
+  color: var(--chef-para);
   font-size: 14px;
   margin: 50% 0;
 }
 .chefs .container .chefs-pic .chef .disc p {
-  color: var(--par-content);
+  color: var(--chef-para);
   font-size: 15px;
   margin: 2% 0;
 }
