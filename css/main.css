@@ -1,11 +1,30 @@
-/* Reset */
-
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
 
+/* Font Family */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.amatic {
+  font-family: "Amatic SC", sans-serif;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Reset */
 ul {
   list-style: none;
   padding: 0;
@@ -47,11 +66,16 @@ input {
   --title-content: #37373f;
   --par-content: #37373f;
   --hover-light: #e61414;
+  --btn-content-hvr: #fff;
+
+  --contact-color: #7d7d7d;
 
   --chef-bcg: #fff;
   --chef-para: #9f9f9f;
   --chef-title: #212529;
   --meal-bcg-light: #fff;
+
+  --contact-list-color: #f5f5f5;
 
   --par-pure: #ddd;
   --white-pure: #fff;
@@ -80,7 +104,9 @@ input {
   --chef-title: #fff;
   --selection-bcg: #916220;
   --selection-color: #202020;
-
+  --btn-content-hvr: #171717;
+  --contact-color: #adadad;
+  --contact-list-color: #0d0d0d;
   --black-color: #fff;
   --white-color: #000;
 }
@@ -103,26 +129,6 @@ input {
   color: var(--selection-color);
 }
 
-/* Font Family */
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin: 0;
-  padding: 0;
-  text-transform: capitalize;
-}
-
-.amatic {
-  font-family: "Amatic SC", sans-serif;
-}
-
-.inter {
-  font-family: "Inter", sans-serif;
-}
-
 /* Global Css Role */
 
 :where(.chefs, .gallery, .contact) .container {
@@ -141,6 +147,8 @@ body {
   font-weight: 400;
   color: #7F7F90;
   text-transform: uppercase;
+  margin-bottom: 0;
+  
 }
 
 :where(.chefs, .gallery, .contact) .title p {
@@ -148,6 +156,7 @@ body {
   font-weight: 400;
   color: var(--black-color);
   margin-top: 0;
+  margin-bottom: 25px;
 }
 
 :where(.chefs, .gallery, .contact) .container .title p > span {
@@ -180,6 +189,7 @@ nav {
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
   z-index: 10;
   padding: 4% 3%;
+  /* overflow: auto; */
 }
 
 nav .container {
@@ -392,6 +402,8 @@ header .content .btn-link {
   align-items: center;
   justify-content: space-evenly;
   margin: 4% 0;
+  width: 60%;
+  margin: auto;
 }
 
 header .content .btn-link .table {
@@ -428,8 +440,8 @@ header .content .btn-link .watch-video:hover a {
 
 header .content .btn-link .watch-video .linear-gradient {
   display: flex;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   background-image: linear-gradient(
     to right,
     var(--main-color) 0 50%,
@@ -443,15 +455,15 @@ header .content .btn-link .watch-video .linear-gradient i {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: -1;
-  background-color: var(--white-color);
+  background-color: var(--btn-content-hvr);
 }
 
 header .content .btn-link .watch-video a .word {
@@ -567,6 +579,7 @@ header .content .btn-link .watch-video a {
   color: var(--chef-para);
   font-size: 15px;
   margin: 2% 0;
+  font-style: italic;
 }
 
 /* 
@@ -587,7 +600,7 @@ header .content .btn-link .watch-video a {
 
 .gallery .container .meals {
   column-count: 1;
-  column-gap: 30px;
+  column-gap: 20px;
 }
 
 .gallery .container .meals .meal {
@@ -661,15 +674,18 @@ header .content .btn-link .watch-video a {
 
 .contact .container ul.contact-info {
   padding: 0;
+  margin: 20px 0;
+  gap: 5px;
 }
 
 .contact .container ul.contact-info li {
   display: flex;
   align-items: center;
-  background-color: var(--white-color);
+  background-color: var(--contact-list-color);
   margin-bottom: 3%;
-  padding: 10px;
+  padding: 5px 25px;
   text-align: left;
+  transition: background-color 0.3s linear;
 }
 
 .contact .container ul.contact-info li div.icon {
@@ -694,7 +710,7 @@ header .content .btn-link .watch-video a {
 .contact .container ul.contact-info li div.info h3 {
   margin-bottom: 0;
   font-size: 20px;
-  color: #7d7d7d;
+  color: var(--contact-color);
 }
 
 .contact .container ul.contact-info li div.info p {
@@ -734,8 +750,9 @@ header .content .btn-link .watch-video a {
 
 .contact .container form textarea {
   resize: vertical;
-  min-height: 100px;
-  max-height: 150px;
+  min-height: 150px;
+  max-height: 300px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact .container form button {
@@ -745,7 +762,7 @@ header .content .btn-link .watch-video a {
   border: none;
   font-size: 15px;
   margin: 25px 0px 0px;
-  padding: 12px 40px;
+  padding: 15px 40px;
   border-radius: 20px;
   background-color: var(--main-color);
   color: var(--white-color);
@@ -771,7 +788,7 @@ footer {
   background-image: url(../images/footer/textured-metal-background.jpg);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: repeat;
   color: #fff;

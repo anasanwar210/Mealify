@@ -162,7 +162,7 @@
   header .content .btn-link {
     justify-content: flex-start;
     gap: 20px;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -264,9 +264,10 @@
     flex-wrap: wrap;
   }
   .contact .container ul.contact-info li {
-    width: calc((100% - 10px) / 2);
+    width: calc((100% / 2 ) - 20px);
     margin-bottom: 1%;
-    padding: 10px;
+    gap: 10px;
+    /* padding: 10px; */
   }
 
   .contact .container ul.contact-info li:nth-child(odd) {
@@ -338,8 +339,10 @@
 
 @media (min-width: 1200px) {
   footer .container {
+    width: 95%;
     display: flex;
     justify-content: space-between;
+    padding: 35px 15px;
   }
 
   footer .container :where(.mealify, .subscribe, .details) {
@@ -347,10 +350,10 @@
   }
 
   footer .container .mealify {
-    width: 40%;
+    width: 50%;
   }
 
   footer .container .details {
-    width: 40%;
+    width: 50%;
   }
 }
