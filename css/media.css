@@ -21,11 +21,32 @@
     width: 40%;
   }
 
+  header .content{
+    width: 80%;
+  }
+
+  header .content .disc{
+    width: 80%;
+    margin: auto;
+    padding-top: 3%;
+  }
+
   header .content .img-contain {
     text-align: center;
+    padding-top: 12%;
   }
   header .content .img-contain img {
     width: 90%;
+  }
+
+
+  header .content .btn-link{
+    width: 60%;
+    margin: auto;
+  }
+
+  header .content .btn-link .table{
+    border-radius: 20px;
   }
 }
 
@@ -66,12 +87,17 @@
   header .content .btn-link {
     padding-top: 3%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 15px;
     flex-direction: row;
   }
 }
 
 @media (min-width: 1200px) {
+  #overlay{
+    display: none;
+  }
+
   nav {
     padding: 0;
   }
@@ -184,6 +210,7 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+  
   .chefs .container .chefs-pic .chef {
     width: calc((100% - 60px) / 3);
     margin-left: auto;
